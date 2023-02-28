@@ -18,5 +18,8 @@ public struct FooPackage {
         mutating func pop() -> T? {
             return data.popLast()
         }
+        // initializer is inaccessible due to 'internal' protection level
+        // https://stackoverflow.com/questions/40859139/initializer-is-inaccessable-due-to-internal-protection-level
+        public init() {}
     }
 }
